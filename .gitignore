@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.vercel
+.env
+.env*
+*.tsbuildinfo
+next-env.d.ts
+package-lock.json
+yarn.lock
+
+# Vendor agent skills the Vercel CLI drops in on integration install
+.agents/
+.claude/
+skills-lock.json

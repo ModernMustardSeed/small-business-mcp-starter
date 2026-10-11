@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm check:prose
+      - run: pnpm build
+      - name: Evals and preflight against the built server
+        run: |
+          pnpm start --port 3000 &
+          for i in $(seq 1 30); do curl -sf http://localhost:3000/docs/holidays > /dev/null && break; sleep 1; done
+          pnpm evals http://localhost:3000
+          pnpm preflight http://localhost:3000
