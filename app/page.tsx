@@ -1,8 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE } from '@/lib/site.ts';
 import { EXAMPLE_PROMPTS, SERVER_NAME } from '@/lib/holidays/tools.ts';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 export default function Home() {
   const endpoint = `${SITE.url}/holidays`;
