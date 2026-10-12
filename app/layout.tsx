@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 /** The studio that wrote the kit. Keep it as author when you fork; change publisher to your company. */
-const MMS_ORG = { '@type': 'Organization', '@id': 'https://modernmustardseed.com/#organization', name: 'Modern Mustard Seed', url: 'https://modernmustardseed.com' };
+const MMS_ORG = { '@type': 'Organization', '@id': 'https://modernmustardseed.com/#organization', name: 'Modern Mustard Seed', url: 'https://modernmustardseed.com', sameAs: ['https://www.google.com/maps?cid=8255098141806810627', 'https://www.linkedin.com/company/modernmustardseed', 'https://github.com/ModernMustardSeed', 'https://www.youtube.com/@modernmustardseed', 'https://www.facebook.com/modernmustardseed'] };
 
 function softwareJsonLd() {
   return {
