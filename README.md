@@ -148,6 +148,15 @@ Issues and pull requests are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Re
 
 This kit is not affiliated with or endorsed by Anthropic. "Claude" is a trademark of Anthropic, PBC. Directory rules change; the checklist links every rule to Anthropic's documentation so you can confirm it before you submit.
 
+## Built by Modern Mustard Seed
+
+This kit comes from [Modern Mustard Seed](https://modernmustardseed.com), an AI studio in Kalispell, Montana that builds websites, AI voice agents and custom software for small businesses, managed for you, end to end.
+
+- [Live demo of the example connector](https://starter.modernmustardseed.com)
+- [How we build connectors, and why each rule exists](https://modernmustardseed.com/how-we-build)
+- [Every connector we have built for Claude](https://modernmustardseed.com/built-for-claude)
+- [Docs for our production connectors](https://mcp.modernmustardseed.com)
+
 ## License
 
 [MIT](LICENSE), Copyright (c) 2026 Modern Mustard Seed LLC.
