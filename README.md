@@ -16,6 +16,17 @@ This kit is the set of patterns Modern Mustard Seed uses for the connectors it r
 
 MIT licensed. Built by [Modern Mustard Seed](https://modernmustardseed.com).
 
+## Working demo
+
+The example connector runs live, deployed from this repository with no changes:
+
+- Connector URL: `https://starter.modernmustardseed.com/holidays` (add it in Claude under **Customize > Connectors > Add custom connector**)
+- Docs page reviewers read: https://starter.modernmustardseed.com/docs/holidays
+- Privacy, terms and support: https://starter.modernmustardseed.com/privacy, [/terms](https://starter.modernmustardseed.com/terms), [/support](https://starter.modernmustardseed.com/support)
+- Official MCP Registry entry: `com.modernmustardseed/holiday-calendar`
+
+Run the evals against it yourself: `node eval/holidays.eval.mjs https://starter.modernmustardseed.com`
+
 ## Quickstart: 10 minutes
 
 You need Node 22.6 or later, pnpm, and a Vercel account (any host that runs Next.js works).
@@ -47,7 +58,7 @@ You should see `32 pass` from the unit tests and `35 of 35 passed` from the eval
 
 **3. Make it yours.** (2 minutes)
 
-Edit `lib/site.ts`: company name, location, website, support inbox, security inbox, and the policy date. Every public page and `security.txt` read from it.
+Edit `lib/site.ts`: company name, location, website, support inbox, security inbox, and the policy date. Every public page and `security.txt` read from it. Replace `app/icon.svg` and `app/apple-icon.png` with your own mark; the directory listing asks for an icon.
 
 **4. Deploy.** (3 minutes)
 
